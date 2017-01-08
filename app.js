@@ -3,13 +3,29 @@ var express = require('express'),
 
 app.set('port', process.env.PORT || 3000);
 
+//Nav
+var nav = [{link:'/books', Text:'Book'},{link:'/authors', Text:'Author'}];
+
+//Import Routes
+var bookRouter = require('./routes/bookRoute')(nav);
+
+//Use Routes
+app.use('/books', bookRouter);
+
 //Designate Dirs
 app.use(express.static('public'));
-app.use(express.static('src/views'));
+
+//Views conf
+app.set('views', 'src/views');
+app.set('view engine', 'ejs');
 
 //Routes
 app.get('/', function (req, res) {
-   res.send('<h1>Hello Guys?</h1>'); 
+   res.render('index', {
+       nav : [
+           {link:'/books', Text:'Books'},
+           {link:'/authors', Text:'Authors'}]
+   }); 
 });
 
 //Server

@@ -38,7 +38,7 @@ gulp.task('inject', function () {
             .pipe(gulp.dest('./src/views'));
 });
 
-//Refresh our browser on save(js files only)
+//Reboot app on file save(js files only)
 gulp.task('serve', ['style', 'inject'], function () {
     var options = {
         script: 'app.js',

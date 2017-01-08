@@ -35,18 +35,11 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <li>
-          <a href="#">Category</a>
-        </li>
-        <li>
-          <a href="#">Category</a>
-        </li>
-        <li>
-          <a href="#">Category</a>
-        </li>
-        <li>
-          <a href="#">Category</a>
-        </li>
+          
+        <% for(var i=0; i<nav.length; i++){ %>
+            <li><a href="<%= nav[i].link %>"><%= nav[i].Text %></a></li>
+        <% } %>
+        
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
@@ -255,14 +248,14 @@
   </div>
 </footer>
 
-        <!-- bower:js -->
-        <script src="/lib/jquery/dist/jquery.js"></script>
-        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- endbower -->
-        
-        <!-- inject:js -->
-        <script src="/js/myscript.js"></script>
-        <!-- endinject -->
-        
-        </body>
+<!-- bower:js -->
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- endbower -->
+
+<!-- inject:js -->
+<script src="/js/myscript.js"></script>
+<!-- endinject -->
+
+</body>
 </html>
