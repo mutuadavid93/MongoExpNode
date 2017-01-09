@@ -1,5 +1,5 @@
 var express = require('express'),
-        mongodb = require('mongodb').MongoClient;
+        mongodb = require('mongodb').MongoClient,
         adminRouter = express.Router();
         
 var books = [

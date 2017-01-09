@@ -98,17 +98,40 @@
           
           <div class="row">    
             <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              Sign in
+            <div class="col-md-4 col-sm-4">
+                <h3>Sign in</h3>
+              <form name="signInForm" action="/auth/signin" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label">username: </label>
+                        <input type="text" class="form-control" name="userName" id="userName" />
+                    </div>
+                    <br />
+                    
+                    <div class="form-group">
+                        <label class="control-label">password: </label>
+                        <input type="password" class="form-control" name="password" id="password" />
+                    </div>
+                    <br />
+                    
+                    <input class="btn btn-primary" type="submit" value="Sign in" />
+                </form><!-- Form -->
             </div>
-            <div class="col-md-10 col-sm-9">
+            <div class="col-md-6 col-md-offset-1 col-sm-8">
                 <h3>Sign up</h3>
                 
-                <form name="signUpForm" action="/auth/signUp" method="post">
-                    <input type="text" class="form-control" name="userName" id="userName" />
+                <form name="signUpForm" action="/auth/signUp" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label">username: </label>
+                        <input type="text" class="form-control" name="userName" id="userName" />
+                    </div>
                     <br />
-                    <input type="password" class="form-control" name="password" id="password" />
+                    
+                    <div class="form-group">
+                        <label class="control-label">password: </label>
+                        <input type="password" class="form-control" name="password" id="password" />
+                    </div>
                     <br />
+                    
                     <input class="btn btn-primary" type="submit" value="Sign up" />
                 </form><!-- Form -->
                 

@@ -5,6 +5,15 @@ var express = require('express'),
 
 //Declare the (nav) fcn used in app.js
 var router = function(nav) {
+    
+    //Deny book access if not signed in
+    bookRouter.use(function (req, res, next) {
+       if(!req.user) {
+            res.redirect('/');
+        }
+        next(); 
+    });
+    
     //All Books Route
     bookRouter.route('/').get(function (req, res) {
         //MongoDB code
